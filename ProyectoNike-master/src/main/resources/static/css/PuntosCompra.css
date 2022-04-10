@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Creepster&family=M+PLUS+2:wght@300&family=Pacifico&family=Rock+Salt&family=Sofadi+One&family=Ultra&display=swap');
+*{
+    margin: 1px;
+    font-family: 'Cinzel Decorative';
+    background-image: url("https://images.pexels.com/photos/7500606/pexels-photo-7500606.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500") ;
+    color: white;
+}
+h1{
+    margin-bottom: 5px;
+}
+
+

@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Calligraffitti&family=Cinzel+Decorative&family=Creepster&family=IM+Fell+Double+Pica:ital@1&family=M+PLUS+2:wght@300&family=Pacifico&family=Rock+Salt&family=Sofadi+One&family=Ultra&display=swap');
+*{
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    margin: 2px;
+    background: #DABEFC;
+}
+
+a{
+    text-decoration: none;
+    color: #00FFA0;
+    font-size: 30px;
+}
+blockquote figure img{
+    height: 200px;
+    width: 200px;
+}
+#izquierda{
+   position: relative;
+   left: 0.5px;
+}
+#centro1{
+    position: relative;
+    left: 250px;
+    bottom: 965px;
+}
+
+#centro2{
+    position: relative;
+    left: 500px;
+    bottom: 1929px;
+}
+#centro3{
+    position: relative;
+    left: 1000px;
+    bottom: 2890px;
+}
+#centro4{
+    position: relative;
+    left: 1250px;
+    bottom: 3855px;
+}
+#derecha{
+    position: relative;
+    left: 1500px;
+    bottom: 4822.5px;
+}
+

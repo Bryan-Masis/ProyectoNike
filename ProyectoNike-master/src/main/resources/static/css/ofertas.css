@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+    font-family: "Krub", sans-serif;
+
+}
+
+
+body{
+    background-color:#666666;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 164px;
+    background-color: #000000;
+}
+main{
+    display:block;
+    height: 61%;
+}
+h1{
+    font-size: 4rem;
+    text-align: center;
+    color: #cccccc
+
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+
+}
+.ofertas {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+img{
+    border-radius: 5% 5%;
+    width: 80%;
+    height: 60%;
+}
+h2{
+    font-size:3.2rem;
+    text-align: center;
+    color:#cccccc;
+}
+.bloques{
+    display:grid;
+ grid-template-columns: repeat(4, 1fr);   
+ 
+}
+
+.bloque{
+    text-align: center;
+}
+

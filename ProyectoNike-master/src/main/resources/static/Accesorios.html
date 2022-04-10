@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Accesorios</title>
+        <link href="CSS/Accesorios.css" rel="stylesheet">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+            <header>
+                <h1>Accesorios Nike</h1>
+                <h1 th:text="#{prueba.nombre}">XXX</h1> <!-- esto fue lo que agregue -->
+            </header>
+
+            <nav class="menu">
+                <ul class="listanoordenada">
+                    <li><a href="Gorra.html">Gorras</a></li>
+                    <li><a href="Gafas.html">Gafas</a></li>
+                    <li><a href="Medias.html">Medias</a></li>
+                    <li><a href="Billeteras.html">Billeteras</a></li>
+                    <li><a href="Relojes.html">Relojes</a></li>
+                </ul>
+            </nav>
+
+            <section class="contenido">
+                <article class="art">
+                    <header id="he">Todos los accesorios a buen precio</header>
+                    <figure>
+                        <img src="images/gorra.jpg" alt="Nike" width="200"><br>
+                        <img src="images/basket.jpg" alt="Nike" width="200"><br>
+                        <img src="images/medias.jpg" alt="Nike" width="200"><br>
+                        <img src="images/reloj.jpg" alt="Nike" width="200">
+                    </figure>
+                </article>
+                <video autoplay Muted loop>
+                    <source src="video/recurso.mp4" type="video/mp4">
+                </video>
+            </section>
+            <footer id="piepagina">
+                Puede contactarnos al <address>Telefono 2255-6556</address>
+            </footer>
+    </body>
+</html>

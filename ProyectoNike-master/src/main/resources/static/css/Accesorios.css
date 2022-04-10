@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&family=Pacifico&family=Rock+Salt&family=Sofadi+One&display=swap');
+*{
+    background: #D5E7F4;
+    margin: 2px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rock Salt';
+    margin-bottom: 25px;
+    margin-left: 0;
+}
+.listanoordenada{
+    padding: 25px;
+}
+ul li{
+    list-style-position: inside;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.menu{
+    align-items: center;
+    flex:1;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 0px 20px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333300;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color: orangered;
+    background: #DABEFC;
+}
+.contenido{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: o.5s;
+    z-index: 2;
+}
+.contenido video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+#he{
+    text-transform: fullsize-kana;
+    text-height:max-size;
+    text-decoration: #111;
+    background: #D5E7F4;
+}
+
+
+.art{
+    margin-left: auto;
+    margin-bottom: auto;
+    border-bottom: 0;
+    padding-bottom: 0px;
+    position: absolute;
+    left: 5px;
+    top: 0px;
+    z-index: 100;
+}
+#piepagina{
+    margin-top: 55%;
+}
+
+

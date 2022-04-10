@@ -1,0 +1,89 @@
+body{
+  font-family: "Krub", sans-serif;
+}
+h1{
+    text-align: center;
+    font-size: 3.8rem;
+    font-weight: bold;
+}
+
+html{
+    box-sizing: border-box;
+}
+.nav{
+    background-color: #999999;
+    display:block;
+   
+}
+.navegacion-principal{
+ display:flex;
+ flex-direction: row;
+ justify-content: space-between; 
+ 
+}
+.contenedor {
+  max-width: 120rem; 
+  margin: 0 auto; 
+}
+.navegacion-principal a {
+ flex-direction: row;
+ justify-content: space-between; 
+  text-align: center;
+  color:#FFFFFF;
+  text-decoration: none; /*eleiminar la linea debajo de los enlaces*/
+  font-size: 2rem;
+  font-weight: bold; /*eleiminar la linea debajo de los enlaces*/
+  padding: 1rem; /* este padding lo pongo aqui para que el elemento enlace(a) se engorde y quede del tama;o de la barra azul.*/
+}
+.navegacion-principal a:hover {
+ 
+
+  background-color: #FFFFFF;
+  color: #ffff33; 
+  
+}
+
+.principal {
+    
+    background-image: url(../images/nike.jpg);
+    border-radius: 0% 0% 3% 3%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.pie-pagina{
+  text-align: center;
+}
+h2{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 2.8rem;
+}
+.ubicaciones {
+    position: absolute;
+     width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.boton{
+    background-color: #ffff33;
+    color: #FFFFFF;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase; /*poner texto en mayuscula*/
+    font-weight: bold; /*texto en negrita*/
+    border-radius: .5rem;
+    width: 90%; /*ancho de 90, si se deja en 100 se ve feo.*/
+    text-align: center;
+    border: none; /*esto lo pongo para quitarle el borde al input, que todos tienen por default*/
+}
+.boton{
+    width: auto;
+}

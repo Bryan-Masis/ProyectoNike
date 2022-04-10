@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@300&family=Pacifico&family=Rock+Salt&family=Sofadi+One&family=Ultra&display=swap');
+*{
+    font-family: 'Ultra';
+    color: #111;
+    text-decoration-line:none;
+    background: rgba(37,177,194,0.4);
+    margin: 2px;
+}
+.menu{
+    align-items: center;
+    flex:1;
+}
+#aaa{
+    padding: 25px;
+    box-shadow: none;
+}
+header nav ul li{
+    display: inline-block; /*con esto hago que se alinien*/
+    list-style: none;
+    margin: 0px 20px;
+}
+.bloque1{
+    align-items: center;
+    flex:1;
+}
+.menu2{
+    display: inline-block; /*con esto hago que se alinien*/
+    list-style: none;
+    margin: 0px 20px;
+}
+section nav figure img{
+    height: 625px;
+    width: 1450px;
+    margin-left: 21.5%;
+    position: relative;
+    bottom: 629px;
+    left: 8px;
+    right: 5px;
+}
+
+div p{
+    font-size: 20px;
+    position: relative;
+    bottom: 550px;
+}
+div aside img{
+    height: 220px;
+    width: 165px;
+    margin-left: 9.5%;
+    position: relative;
+    bottom: 550px;
+}
+/*Recuerde corregir a futuro un espacion que hay al final*/
+/*Recordar hacer lo del container para efectos de proyecto*/
