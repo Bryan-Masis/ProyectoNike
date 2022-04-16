@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:fragment="head">
+        <title>Control Voluntarios</title>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+        <link rel="stylesheet" th:href="@{/webjars/font-awesome/css/all.css}"/>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    </head>
+    <body>
+        <header th:fragment="header">
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+                <div class="container" >
+                    <a th:href="@{/}" 
+                       class="navbar-brand" 
+                       th:text="#{plantilla.titulo}">{Únete a la Campaña</a>
+                    <button class="navbar-toggler"
+                            data-toggle="collapse"
+                            data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse"
+                         id="navbarCollapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a th:href="@{/}"
+                                   class="nav-link active"
+                                   th:text="#{barra.titulo}">Inicio</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2">
+                                <a th:href="@{/eventos}"
+                                   class="nav-link active"
+                                   th:text="#{barra.eventos}">Eventos</a>
+                            </li>
+                        </ul>
+                        <ul sec:authorize="isAuthenticaded()"
+                            class="navbar-nav ml-auto">
+                            <li class="nav-item mr-3">
+                                <a href="#" class="nav-link">
+                                    <i class="fas fa-user"></i>
+                                    <span th:text="#{barra.bienvenido}">Bienvenido</span>
+                                    <span sec:authentication="name">Usuario</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <form method="POST" th:accion="@{/logout}">
+                                    <a href="@{/inicio}"
+                                       onclick="this.parentNode.submit();"
+                                       class="nav-link">
+                                        <i class="fas fa-user-times"></i> [[#{barra.salir}]]
+                                    </a>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+        </header>
+        </head>
+        <body>
+
+            <header2 th:fragment="headerInicio">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+                    <div class="container" >
+                        <a th:href="@{/}" 
+                           class="navbar-brand" 
+                           th:text="#{plantilla.titulo}">{Únete a la Campaña</a>
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                    <div >
+                        <a th:href="@{/index}" 
+                           class="navbar-brand" 
+                           th:text="#{barra.admin}">{Administración</a>
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+                
+            </header2>
+            
+            <section th:fragment="carrusel">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/reciclaje1.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h8>Conviértete en un super ciudadano</h8>
+                                    <p>Buscamos Héroes que nos ayuden a limipiar nuestras playas.</p>
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="reciclaje2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Aprende ayudando</h5>
+                                    <p>Ayúdanos a limpiar nuestro país mientras aprendes de reciclaje.</p>
+                                </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="reciclaje3.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <h5>Reciclar no es solo una acción</h5>
+                                    <p>Es la preservación del mundo y sus recursos.</p>
+                                </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+            
+            <header3 th:fragment="headerCampanaRio">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+                    <div class="container" >
+                        <a th:href="@{/}" 
+                           class="navbar-brand" 
+                           th:text="#{barra.titulo}">{Inicio</a>
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                    <div >
+                        <a th:href="@{/index}" 
+                           class="navbar-brand" 
+                           th:text="#{barra.admin}">{Administración</a>
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+                
+            </header3>
+            
+            <header th:fragment="headerFinal">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+                    <div class="container" >
+                        <a th:href="@{/}" 
+                           class="navbar-brand" 
+                           th:text="#{plantilla.titulo}">{Únete a la Campaña</a>
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="container" >
+                        
+                        <a th:href="@{/}" 
+                           class="navbar-brand" 
+                           th:text="#{barra.titulo}">
+                           
+                        </a>
+                        
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse"> 
+                            
+                            <span class="navbar-toggler-icon"><i class="fas fa-play"></i></span>
+                        </button>
+                    </div>
+                    
+                    <div class="container" >
+                        <a th:href="@{/eventos}" 
+                           class="navbar-brand" 
+                           th:text="#{barra.eventos}">{Eventos</a>
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                    <div >
+                        <a th:href="@{/index}" 
+                           class="navbar-brand" 
+                           th:text="#{barra.admin}">{Administración</a>
+                        <button class="navbar-toggler"
+                                data-toggle="collapse"
+                                data-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                </nav>
+            </header>
+
+
+
+
+            <footer th:fragment="footer" class="bg-info text-white mt-5 p-5">
+                <div class="container">
+                    <div class="col">
+                        <p class="lead text-center">
+                            <a th:href="@{/(lang=es)}">ES</a> | 
+                            <a th:href="@{/(lang=en)}">EN</a> | 
+                            <span> [[#{plantilla.pie-pagina}]] &copy;</span>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </body>
+</html>

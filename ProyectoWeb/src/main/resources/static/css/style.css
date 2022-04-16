@@ -1,0 +1,39 @@
+.header {
+    color: #36A0FF;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #36A0FF;
+}
+
+.padding-form {
+    padding: 15px;
+    justify-content: center;
+}
+
+.padding-comment {
+    margin-top: 10px;
+    justify-content: center;
+}
+
+body {
+    background-color: #e2e2e2;
+}
+
+.space-button{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.space-between{
+    padding: 2px;
+}
+
+.bajar{
+   margin-top: 105px;
+   padding-top: 105px;
+}
+

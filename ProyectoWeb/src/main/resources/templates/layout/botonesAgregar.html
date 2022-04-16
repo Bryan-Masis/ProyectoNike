@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head>
+        <title>Botones Agregar</title>
+        <meta charset="UTF-8"/>        
+    </head>
+    <body>
+        <section th:fragment="botonesAgregar" 
+                 class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+                    </div>
+                </div>
+            </div>           
+        </section>
+
+         <section th:fragment="botonesAgregar2" 
+                 class="py-4  ">
+            
+        </section>
+        
+        <section th:fragment="botonesAgregar3" 
+                 class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="/agregarRio" class="btn btn-primary btn-block"
+                           data-toggle="modal"
+                           data-target="#agregarPersona">
+                            <i class="fas fa-plus"></i> [[#{accion.unirse}]]
+                        </a>
+                    </div>
+                </div>
+            </div>           
+        </section>
+        
+        <section th:fragment="regresar" 
+                 class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="/" class="btn btn-secondary btn-block"
+                           data-toggle="modal"
+                            data-target="#/">
+                            <i class="fas fa-reply"></i> [[#{accion.regresar}]]
+                        </a>
+                    </div>
+                </div>
+            </div>           
+        </section>
+        
+        <section th:fragment="agregarEventos" 
+                 class="py-4 mb-4 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="/agregarEvento" class="btn btn-primary btn-block"
+                           data-toggle="modal"
+                           data-target="#agregarevento">
+                            <i class="fas fa-plus"></i> [[#{evento.crear}]]
+                        </a>
+                    </div>
+                </div>
+            </div>           
+        </section>
+
+    </body>
+</html>
+

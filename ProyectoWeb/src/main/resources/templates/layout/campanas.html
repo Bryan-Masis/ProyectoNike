@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <head>
+        <title>Campañas</title>
+    </head>
+    <body>
+
+        <section th:fragment="campanas" class="py-4 mb-4 bg-light">
+            <div class="container" >
+                <table>
+                    <td>
+                        <div class="card p-2" style="width: 36rem;">
+                            <img src="LimpiezaRio.jpeg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Limpieza de Rio Guayabo</h5>
+                                    <p class="card-text">Inicio de campaña 4 de enero del 2022, Unéte a nuestro equipo y colaboremos juntos para la limpieza del Rio Guayabo.</p>
+                                    <a th:href="@{/campanaRio}"
+                                       class="nav-link active btn btn-primary"
+                                       th:text="Únete"></a>
+                                </div>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="card p-2" style="width: 36rem;">
+                            <img src="LimpiezaPlaya.jpg" class="card-img-top" alt="">
+                                <div class="card-body">
+                                    <h5 class="card-title">Limpieza de Playa Palo Seco</h5>
+                                    <p class="card-text">Inicio de campaña 16 de febrero, ven con nosotros y colabora con la limpieza de una playa en riesgo y que lo está necesitando.  </p>
+                                    <a th:href="@{/campanaPlaya}"
+                                       class="nav-link active btn btn-primary"
+                                       th:text="Únete"></a>
+                                </div>
+                        </div>
+                    </td>
+                </table>
+            </div>  
+        </section>
+        <!-- Campaña de Rio -->
+        <section th:fragment="campanaRio" class="py-4 mb-4 bg-light">
+            <div class="container" >
+                <div class="card mb-3">
+                    <img src="LimpiezaRio1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Juntos Construimos un mejor mañana</h5>
+                            <p class="card-text">Gracias por unirte a esta cruzada, con tu apoyo nuestras playas mostrarán su verdadera belleza y serán nuestro legado para las futuras generaciones.</p>
+                            <p class="card-text"><small class="text-muted"> <span> [[#{plantilla.actualizacion}]]</span> </small></p>
+                        </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="/agregarRio" class="btn btn-primary btn-block"
+                           data-toggle="modal"
+                           data-target="#agregarPersona">
+                            <i class="fas fa-plus"></i> [[#{accion.unirse}]]
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Campaña de playa -->
+        <section th:fragment="campanaPlaya" class="py-4 mb-4 bg-light">
+            <div class="container" >
+                <div class="card mb-3">
+                    <img src="LimpiezaPlaya1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Solo nosotros podemos mantener nuestro paraíso</h5>
+                            <p class="card-text">Sin tu ayuda no sería posible, gracias por contribuir a la preservación de nuestro paraíso natural, nuestras playas cuentan contigo.</p>
+                            <p class="card-text"><small class="text-muted"> <span> [[#{plantilla.actualizacion}]]</span> </small></p>
+                        </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="/agregarPlaya" class="btn btn-primary btn-block"
+                           data-toggle="modal"
+                           data-target="#agregarPersona">
+                            <i class="fas fa-plus"></i> [[#{accion.unirse}]]
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </body>
+</html>

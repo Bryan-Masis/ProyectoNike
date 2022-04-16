@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <head th:replace="layout/plantilla :: head">
+        <title>Datos del Evento</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        
+        <header th:replace="layout/plantilla :: headerFinal"></header>
+        <section th:replace="layout/plantillaActualiza :: acualizarEvento"></section>
+        <!--
+        <h2>[[#{evento.datos}]]</h2>
+        <hr/>
+        <a th:href="@{/inicio}">[[#{accion.regresar}]]</a>
+        <br/>
+        <form th:action="@{/guardarEvento}" 
+              th:object="${evento}">
+            <input type="hidden" name="id" th:field="*{id}"/>
+            <label for="nombre">[[#{evento.nombre}]]:</label>
+            <input type="text" 
+                   required="true" 
+                   name="nombre" 
+                   th:field="*{nombre}"/>
+            <br/>
+            <label for="descripcion">[[#{evento.descripcion}]]:</label>
+            <input type="text" 
+                   required="true" 
+                   name="descripcion" 
+                   th:field="*{descripcion}"/>
+            <br/>
+            <label for="fecha">[[#{evento.fecha}]]:</label>
+            <input type="text" 
+                   required="true" 
+                   name="fecha" 
+                   th:field="*{fecha}"/>
+            <br/>
+            <input type="submit" th:value="#{accion.guardar}" name="guardarEvento"/>
+        </form>
+        -->
+        <footer th:replace="layout/plantilla :: footer"></footer>
+        
+    </body>
+</html>

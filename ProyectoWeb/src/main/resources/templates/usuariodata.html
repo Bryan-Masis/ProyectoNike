@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+    <head th:replace="layout/plantilla :: head">
+        <title>Datos de la Persona</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        
+        <header th:replace="layout/plantilla :: headerFinal"></header>
+        <h2>[[#{persona.datos}]]</h2>
+        <hr/>
+        <a th:href="@{/inicio}">[[#{accion.regresar}]]</a>
+        <br/>
+        <form th:action="@{/guardar}" 
+              th:object="${persona}">
+            <input type="hidden" name="id" th:field="*{id}"/>
+            <label for="nombre">[[#{persona.nombre}]]:</label>
+            <input type="text" 
+                   required="true" 
+                   name="nombre" 
+                   th:field="*{nombre}"/>
+            <br/>
+            <label for="apellidos">[[#{persona.apellidos}]]:</label>
+            <input type="text" 
+                   required="true" 
+                   name="apellidos" 
+                   th:field="*{apellidos}"/>
+            <br/>
+            <label for="email">[[#{persona.email}]]:</label>
+            <input type="text" 
+                   required="true" 
+                   name="email" 
+                   th:field="*{email}"/>
+            <br/>
+            <label for="telefono">[[#{persona.telefono}]]:</label>
+            <input type="text" 
+                   name="telefono" 
+                   th:field="*{telefono}"/>
+            <br/>
+            <input type="submit" th:value="#{accion.guardar}" name="guardar"/>
+        </form>
+        
+      
+        
+        <footer th:replace="layout/plantilla :: footer"></footer>
+        
+    </body>
+</html>
